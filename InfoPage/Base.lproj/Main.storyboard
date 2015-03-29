@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="InfoPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6c-rG-4Dn" userLabel="GameView" customClass="GameView" customModule="InfoPage" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suI-ax-cmU" userLabel="CenterView" customClass="CenterView" customModule="InfoPage" customModuleProvider="target">
+                                        <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="EGa-XD-CBe"/>
+                                            <constraint firstAttribute="height" constant="150" id="zQU-WD-8Hr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="suI-ax-cmU" firstAttribute="leading" secondItem="m6c-rG-4Dn" secondAttribute="leading" constant="225" id="6Ct-hr-gNZ"/>
+                                    <constraint firstItem="suI-ax-cmU" firstAttribute="top" secondItem="m6c-rG-4Dn" secondAttribute="top" constant="225" id="eXq-Af-2md"/>
+                                    <constraint firstItem="suI-ax-cmU" firstAttribute="centerX" secondItem="m6c-rG-4Dn" secondAttribute="centerX" id="ezt-1l-6BX"/>
+                                    <constraint firstItem="suI-ax-cmU" firstAttribute="centerY" secondItem="m6c-rG-4Dn" secondAttribute="centerY" id="yoI-qp-8Go"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Ct-hr-gNZ"/>
+                                        <exclude reference="eXq-Af-2md"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MLR-M1-d0u" appends="YES" id="RT7-M9-8lI"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m6c-rG-4Dn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8YB-3s-1dR"/>
+                            <constraint firstAttribute="trailing" secondItem="m6c-rG-4Dn" secondAttribute="trailing" id="PeT-2U-hwx"/>
+                            <constraint firstItem="m6c-rG-4Dn" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="aw1-LM-Ded"/>
+                            <constraint firstItem="m6c-rG-4Dn" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="el6-TQ-ziD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerView" destination="suI-ax-cmU" id="qz0-GX-af8"/>
+                        <outlet property="gameView" destination="m6c-rG-4Dn" id="7KF-E4-o43"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MLR-M1-d0u" userLabel="tap">
+                    <connections>
+                        <action selector="tap:" destination="vXZ-lx-hvc" id="Qrt-Xv-C73"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
